@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Lora:wght@400;500&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --text-clr: #4a5c6c;
+  --bg-clr: #f5f7fb;
+  --border-clr: #9cb0c1;
+  --dim-grey: #a0a0a0;
+  --black: #000;
+  --highlight: #ffb92a;
+  --white: #fff;
+  --dark-bg: #1c1c2e;
+  --light-bg: #f2f2f2;
+  --green: #4bbc54;
+  --blue: #1cacf4;
+  --purple: #8b5cf6;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dim-grey);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--dark-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container {
+  margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--dim-grey);
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--highlight);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  #bulbImage{
+    height: 500px;
+    width: auto;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  #bulbImage.zoom{
+    transform: scale(1.2);
+  }
